@@ -6,7 +6,7 @@ const quotes: string[] = [
   "The only limit to our realization of tomorrow is our doubts of today.",
   "The future belongs to those who believe in the beauty of their dreams.",
   "Do not watch the clock. Do what it does. Keep going.",
-  "Keep your face always toward the sunshine and shadows will fall behind you.",
+  "Keep your face always toward the sunshine. Then, the shadows will fall behind you.",
   "Believe you can and you're halfway there.",
   "The only way to achieve the impossible is to believe it is possible.",
   "Success is not final, failure is not fatal: It is the courage to continue that counts.",
