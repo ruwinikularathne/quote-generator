@@ -23,6 +23,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gray-100">
+      <h2 className="text-xl font-semibold text-gray-700 mb-4">Are you in a mood to read a quote?</h2>
       <h1 className="text-3xl font-extrabold text-blue-600 mb-6">Random Quote Generator</h1>
       <p className="text-lg text-gray-800 mb-6 text-center max-w-xl">{quote}</p>
       <button
