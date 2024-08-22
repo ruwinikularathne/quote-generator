@@ -18,6 +18,16 @@ const moodQuotes = {
     "Life is what happens when you're busy making other plans.",
     "To live is the rarest thing in the world. Most people exist, that is all.",
   ],
+  Relaxed: [
+    "Take a deep breath and just enjoy your life.",
+    "Sometimes the most productive thing you can do is relax.",
+    "Relax, recharge, and reflect. Sometimes it's okay to do nothing.",
+  ],
+  Inspired: [
+    "Inspiration exists, but it has to find you working.",
+    "The best way to predict the future is to create it.",
+    "Your only limit is your mind. Dream big and work hard.",
+  ],
 };
 
 export default function Home() {
@@ -45,7 +55,7 @@ export default function Home() {
           id="mood-select"
           value={mood}
           onChange={(e) => setMood(e.target.value as keyof typeof moodQuotes)}
-          className="ml-2 p-2 bg-white border rounded"
+          className="ml-2 p-2 bg-gray-200 text-gray-700 border border-gray-300 rounded hover:bg-gray-300 focus:bg-gray-300"
         >
           {Object.keys(moodQuotes).map((mood) => (
             <option key={mood} value={mood}>
@@ -57,7 +67,9 @@ export default function Home() {
 
       {/* Quote Display */}
       <section className="text-center my-8">
-        <p className="text-2xl text-gray-800 mb-6 max-w-xl mx-auto">{quote}</p>
+        <p className="text-2xl text-gray-800 mb-6 max-w-xl mx-auto bg-white p-4 rounded shadow">
+          {quote}
+        </p>
       </section>
 
       {/* Generate Button */}
