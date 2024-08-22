@@ -48,13 +48,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gray-100">
       {/* Header */}
       <header className="text-center py-6">
-        <h1 className="text-4xl font-bold text-blue-600">Random Quote Generator</h1>
+        <h1 className="text-4xl font-bold text-blue-600">Welcome to the Random Quote Generator</h1>
       </header>
 
       {/* Mood Selection */}
       <section className="text-center mb-6">
         <label htmlFor="mood-select" className="text-lg font-semibold text-gray-700 mb-4">
-          Select Your Mood:
+          Select Your Mood Here
         </label>
         <select
           id="mood-select"
@@ -70,13 +70,6 @@ export default function Home() {
         </select>
       </section>
 
-      {/* Quote Display */}
-      <section className="text-center my-8">
-        <p className="text-2xl text-gray-800 mb-6 max-w-xl mx-auto bg-white p-4 rounded shadow">
-          {quote}
-        </p>
-      </section>
-
       {/* Generate Button */}
       <section className="text-center">
         <button
@@ -87,9 +80,18 @@ export default function Home() {
         </button>
       </section>
 
+      {/* Quote Display */}
+      <section className="text-center my-8">
+        <p className="text-2xl text-gray-800 mb-6 max-w-xl mx-auto bg-white p-4 rounded shadow">
+          {quote}
+        </p>
+      </section>
+
+      
+
       {/* Footer (Optional) */}
       <footer className="text-center py-4 text-gray-500">
-        <p>Made by Your Name</p>
+        <p>Have a good day</p>
       </footer>
     </main>
   );
