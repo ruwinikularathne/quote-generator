@@ -28,6 +28,11 @@ const moodQuotes = {
     "The best way to predict the future is to create it.",
     "Your only limit is your mind. Dream big and work hard.",
   ],
+  Love: [
+    "Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope.",
+    "The best thing to hold onto in life is each other.",
+    "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."
+  ],  
 };
 
 export default function Home() {
