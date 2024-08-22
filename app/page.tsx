@@ -38,12 +38,22 @@ const moodQuotes = {
 export default function Home() {
   const [mood, setMood] = useState<keyof typeof moodQuotes>('Motivated');
   const [quote, setQuote] = useState<string>(moodQuotes[mood][0]);
+  const [comment, setComment] = useState<string>('');
 
   const getRandomQuote = () => {
     const randomIndex = Math.floor(Math.random() * moodQuotes[mood].length);
     setQuote(moodQuotes[mood][randomIndex]);
   };
 
+  const handleCommentSubmit = () => {
+    if (comment.trim() !== '') {
+      alert(`Thank you for your comment: "${comment}"`);
+      setComment(''); // Reset comment after submission
+    } else {
+      alert('Please enter a comment before submitting.');
+    }
+  };
+  
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gray-100">
       {/* Header */}
@@ -54,7 +64,7 @@ export default function Home() {
       {/* Mood Selection */}
       <section className="text-center mb-6">
         <label htmlFor="mood-select" className="text-lg font-semibold text-gray-700 mb-4">
-          Select Your Mood Here
+          Select the type or quote you want
         </label>
         <select
           id="mood-select"
@@ -87,7 +97,26 @@ export default function Home() {
         </p>
       </section>
 
-      
+      {/* Comment Section */}
+      <section className="text-center mb-6">
+        <label htmlFor="comment" className="text-lg font-semibold text-gray-700 mb-2">
+          Leave us a comment:
+        </label>
+        <textarea
+          id="comment"
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+          className="w-full max-w-xl p-4 mb-4 bg-gray-200 text-gray-700 border border-gray-300 rounded-lg focus:bg-gray-300"
+          rows={4}
+          placeholder="Type your comment here..."
+        />
+        <button
+          onClick={handleCommentSubmit}
+          className="bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition-colors duration-300"
+        >
+          Submit Comment
+        </button>
+      </section>
 
       {/* Footer (Optional) */}
       <footer className="text-center py-4 text-gray-500">
