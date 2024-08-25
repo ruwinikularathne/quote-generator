@@ -82,9 +82,9 @@ export default function Home() {
 
       {/* Quote Display */}
       <section className="text-center my-8">
-        <p className="text-2xl text-gray-800 mb-6 max-w-xl mx-auto bg-white p-4 rounded shadow">
-          {quote}
-        </p>
+        <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105">
+          <p className="text-2xl text-gray-800 mb-6">{quote}</p>
+        </div>
       </section>
 
       {/* Footer (Optional) */}
