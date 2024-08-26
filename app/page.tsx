@@ -39,11 +39,12 @@ export default function Home() {
   const [mood, setMood] = useState<keyof typeof moodQuotes>('Motivated');
   const [quote, setQuote] = useState<string>(moodQuotes[mood][0]);
 
-  const getRandomQuote = () => {
-    const randomIndex = Math.floor(Math.random() * moodQuotes[mood].length);
-    setQuote(moodQuotes[mood][randomIndex]);
+  const getRandomQuote = (selectedMood: keyof typeof moodQuotes) => {
+    const randomIndex = Math.floor(Math.random() * moodQuotes[selectedMood].length);
+    setMood(selectedMood);
+    setQuote(moodQuotes[selectedMood][randomIndex]);
   }
-  
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gray-100">
       {/* Header */}
@@ -51,30 +52,30 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-blue-600">Welcome to the Random Quote Generator</h1>
       </header>
 
-      {/* Mood Selection */}
+      {/* Mood Selection with Buttons */}
       <section className="text-center mb-6">
-        <label htmlFor="mood-select" className="text-lg font-semibold text-gray-700 mb-4">
-          Select the type or quote you want
-        </label>
-        <select
-          id="mood-select"
-          value={mood}
-          onChange={(e) => setMood(e.target.value as keyof typeof moodQuotes)}
-          className="ml-2 p-2 bg-gray-200 text-gray-700 border border-gray-300 rounded hover:bg-gray-300 focus:bg-gray-300"
-        >
-          {Object.keys(moodQuotes).map((mood) => (
-            <option key={mood} value={mood}>
-              {mood}
-            </option>
+        <h2 className="text-lg font-semibold text-gray-700 mb-4">
+          Select your mood
+        </h2>
+        <div className="flex space-x-4 justify-center">
+          {Object.keys(moodQuotes).map((currentMood) => (
+            <button
+              key={currentMood}
+              onClick={() => getRandomQuote(currentMood as keyof typeof moodQuotes)}
+              className={`p-3 ${
+                mood === currentMood ? 'bg-blue-700' : 'bg-[#6495ED]'
+              } text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300`}
+            >
+              {currentMood}
+            </button>
           ))}
-        </select>
+        </div>
       </section>
 
-      {/* Generate Button */}
-      <section className="text-center">
+      <section className="text-center mt-6">
         <button
           className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300"
-          onClick={getRandomQuote}
+          onClick={() => getRandomQuote(mood)}
         >
           Get a New Quote
         </button>
@@ -89,7 +90,7 @@ export default function Home() {
 
       {/* Footer (Optional) */}
       <footer className="text-center py-4 text-gray-500">
-        <p>Have a good day ❤ </p>
+        <p>Have a good day ❤</p>
       </footer>
     </main>
   );
