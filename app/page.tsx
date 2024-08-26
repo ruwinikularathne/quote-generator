@@ -83,7 +83,7 @@ export default function Home() {
 
       {/* Quote Display */}
       <section className="text-center my-8">
-        <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105">
+        <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 animate-ray-run border-2 border-transparent">
           <p className="text-2xl text-gray-800 mb-6">{quote}</p>
         </div>
       </section>

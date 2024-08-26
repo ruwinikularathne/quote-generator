@@ -13,8 +13,18 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        'ray-run': 'ray 2s linear infinite',
+      },
+      keyframes: {
+        ray: {
+          '0%': { backgroundPosition: '0% 50%', backgroundSize: '200% 100%' },
+          '100%': { backgroundPosition: '100% 50%', backgroundSize: '200% 100%' },
+        },
+      },
     },
   },
   plugins: [],
 };
+
 export default config;
