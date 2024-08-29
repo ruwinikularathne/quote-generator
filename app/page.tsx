@@ -81,12 +81,15 @@ export default function Home() {
         </button>
       </section>
 
-      {/* Quote Display */}
-      <section className="text-center my-8">
-        <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 animate-ray-run border-2 border-transparent">
-          <p className="text-2xl text-gray-800 mb-6">{quote}</p>
-        </div>
-      </section>
+{/* Quote Display */}
+<section className="text-center my-8">
+  <div className="max-w-xl mx-auto p-1 bg-white rounded-lg shadow-lg relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 blur-lg opacity-75 animate-spin-slow"></div>
+    <div className="relative p-6 bg-white rounded-lg shadow-lg">
+      <p className="text-2xl text-gray-800 mb-6">{quote}</p>
+    </div>
+  </div>
+</section>
 
       {/* Footer (Optional) */}
       <footer className="text-center py-4 text-gray-500">

@@ -15,6 +15,7 @@ const config: Config = {
       },
       animation: {
         'ray-run': 'ray 2s linear infinite',
+        'spin-slow': 'spin 10s linear infinite',
       },
       keyframes: {
         ray: {
