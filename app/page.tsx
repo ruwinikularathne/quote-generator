@@ -33,6 +33,26 @@ const moodQuotes = {
     "The best thing to hold onto in life is each other.",
     "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."
   ],  
+  Calm: [
+    "Keep calm and carry on.",
+    "Calmness is the cradle of power.",
+    "The more tranquil a man becomes, the greater is his success."
+  ],
+  Adventurous: [
+    "Life is either a daring adventure or nothing at all.",
+    "The biggest adventure you can take is to live the life of your dreams.",
+    "Adventure is worthwhile in itself."
+  ],
+  Grateful: [
+    "Gratitude turns what we have into enough.",
+    "The more you are in a state of gratitude, the more you will attract things to be grateful for.",
+    "Gratitude is not only the greatest of virtues but the parent of all others."
+  ],
+  Confident: [
+    "Confidence is the key to unlocking your true potential.",
+    "Believe you can, and you're halfway there.",
+    "With confidence, you have won before you have started."
+  ],
 };
 
 export default function Home() {
