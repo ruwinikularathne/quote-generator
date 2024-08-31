@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 
+// Mood quotes
 const moodQuotes = {
   Motivated: [
     "The only limit to our realization of tomorrow is our doubts of today.",
@@ -76,57 +77,92 @@ export default function Home() {
     const randomIndex = Math.floor(Math.random() * moodQuotes[selectedMood].length);
     setMood(selectedMood);
     setQuote(moodQuotes[selectedMood][randomIndex]);
-  }
+  };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gray-100">
-      {/* Header */}
-      <header className="text-center py-6">
-        <h1 className="text-4xl font-bold text-blue-600">Welcome to the Random Quote Generator</h1>
-      </header>
+<main className="flex min-h-screen flex-col items-center justify-center p-6 bg-[#f0f8ff] relative overflow-hidden">
+  {/* Background Particles */}
+  <div className="absolute inset-0 overflow-hidden">
+    {/* Larger Particles */}
+    <div className="w-24 h-24 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '10%', left: '15%', animationDuration: '8s' }}></div>
+    <div className="w-16 h-16 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '60%', left: '25%', animationDuration: '10s' }}></div>
+    <div className="w-32 h-32 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '40%', left: '70%', animationDuration: '12s' }}></div>
+    <div className="w-20 h-20 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '80%', left: '50%', animationDuration: '14s' }}></div>
 
-      {/* Mood Selection with Buttons */}
-      <section className="text-center mb-6">
-        <h2 className="text-lg font-semibold text-gray-700 mb-4">
-          Select your mood
-        </h2>
-        <div className="flex space-x-4 justify-center">
-          {Object.keys(moodQuotes).map((currentMood) => (
-            <button
-              key={currentMood}
-              onClick={() => getRandomQuote(currentMood as keyof typeof moodQuotes)}
-              className={`p-3 ${
-                mood === currentMood ? 'bg-blue-700' : 'bg-[#6495ED]'
-              } text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300`}
-            >
-              {currentMood}
-            </button>
-          ))}
-        </div>
-      </section>
+    {/* Additional Particles on the Right */}
+    <div className="w-12 h-12 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '30%', left: '85%', animationDuration: '11s' }}></div>
+    <div className="w-16 h-16 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '70%', left: '90%', animationDuration: '13s' }}></div>
+    <div className="w-24 h-24 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '50%', left: '80%', animationDuration: '15s' }}></div>
 
-      <section className="text-center mt-6">
+    {/* Smaller Particles */}
+    <div className="w-8 h-8 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '20%', left: '10%', animationDuration: '6s' }}></div>
+    <div className="w-10 h-10 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '70%', left: '15%', animationDuration: '9s' }}></div>
+    <div className="w-12 h-12 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '50%', left: '80%', animationDuration: '11s' }}></div>
+    <div className="w-6 h-6 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '30%', left: '60%', animationDuration: '7s' }}></div>
+    <div className="w-8 h-8 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '90%', left: '20%', animationDuration: '8s' }}></div>
+    <div className="w-12 h-12 bg-particleBlue rounded-full absolute animate-move-particles"
+         style={{ top: '40%', left: '30%', animationDuration: '13s' }}></div>
+  </div>
+
+  {/* Rest of the code */}
+  {/* Header */}
+  <header className="text-center py-6 z-10">
+    <h1 className="text-4xl font-bold text-blue-600">Welcome to the Random Quote Generator</h1>
+  </header>
+
+  {/* Mood Selection with Buttons */}
+  <section className="text-center mb-6 z-10">
+    <h2 className="text-lg font-semibold text-gray-700 mb-4">Select your mood</h2>
+    <div className="flex space-x-4 justify-center">
+      {Object.keys(moodQuotes).map((currentMood) => (
         <button
-          className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300"
-          onClick={() => getRandomQuote(mood)}
+          key={currentMood}
+          onClick={() => getRandomQuote(currentMood as keyof typeof moodQuotes)}
+          className={`p-3 ${
+            mood === currentMood ? 'bg-blue-700' : 'bg-[#6495ED]'
+          } text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300`}
         >
-          Get a New Quote
+          {currentMood}
         </button>
-      </section>
+      ))}
+    </div>
+  </section>
 
-      {/* Quote Display */}
-      <section className="text-center my-8">
-        <div className={`max-w-xl mx-auto p-1 rounded-lg shadow-lg relative overflow-hidden ${backgroundStyles[mood]}`}>
-          <div className="relative p-6 bg-white rounded-lg shadow-lg">
-            <p className="text-2xl text-gray-800 mb-6">{quote}</p>
-          </div>
-        </div>
-      </section>
+  <section className="text-center mt-6 z-10">
+    <button
+      className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300"
+      onClick={() => getRandomQuote(mood)}
+    >
+      Get a New Quote
+    </button>
+  </section>
 
-      {/* Footer (Optional) */}
-      <footer className="text-center py-4 text-gray-500">
-        <p>Have a good day ❤</p>
-      </footer>
-    </main>
+  {/* Quote Display */}
+  <section className="text-center my-8 z-10">
+    <div className={`max-w-xl mx-auto p-1 rounded-lg shadow-lg relative overflow-hidden ${backgroundStyles[mood]}`}>
+      <div className="relative p-6 bg-[#dcf3ff] rounded-lg shadow-lg">
+        <p className="text-2xl text-gray-800 mb-6">{quote}</p>
+      </div>
+    </div>
+  </section>
+
+  {/* Footer (Optional) */}
+  <footer className="text-center py-4 text-blue-500 z-10">
+    <p>Have a good day ❤</p>
+  </footer>
+</main>
+
   );
 }
