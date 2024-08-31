@@ -32,7 +32,7 @@ const moodQuotes = {
     "Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope.",
     "The best thing to hold onto in life is each other.",
     "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."
-  ],  
+  ],
   Calm: [
     "Keep calm and carry on.",
     "Calmness is the cradle of power.",
@@ -53,6 +53,19 @@ const moodQuotes = {
     "Believe you can, and you're halfway there.",
     "With confidence, you have won before you have started."
   ],
+};
+
+const backgroundStyles = {
+  Motivated: 'bg-gradient-to-r from-green-400 to-blue-500',
+  Happy: 'bg-gradient-to-r from-yellow-300 to-pink-400',
+  Thoughtful: 'bg-gradient-to-r from-purple-400 to-indigo-600',
+  Relaxed: 'bg-gradient-to-r from-teal-300 to-blue-300',
+  Inspired: 'bg-gradient-to-r from-orange-300 to-red-600',
+  Love: 'bg-gradient-to-r from-pink-500 to-red-400',
+  Calm: 'bg-gradient-to-r from-blue-300 to-teal-400',
+  Adventurous: 'bg-gradient-to-r from-yellow-500 to-orange-600',
+  Grateful: 'bg-gradient-to-r from-green-300 to-yellow-400',
+  Confident: 'bg-gradient-to-r from-indigo-500 to-purple-600',
 };
 
 export default function Home() {
@@ -101,15 +114,14 @@ export default function Home() {
         </button>
       </section>
 
-{/* Quote Display */}
-<section className="text-center my-8">
-  <div className="max-w-xl mx-auto p-1 bg-white rounded-lg shadow-lg relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 blur-lg opacity-75 animate-spin-slow"></div>
-    <div className="relative p-6 bg-white rounded-lg shadow-lg">
-      <p className="text-2xl text-gray-800 mb-6">{quote}</p>
-    </div>
-  </div>
-</section>
+      {/* Quote Display */}
+      <section className="text-center my-8">
+        <div className={`max-w-xl mx-auto p-1 rounded-lg shadow-lg relative overflow-hidden ${backgroundStyles[mood]}`}>
+          <div className="relative p-6 bg-white rounded-lg shadow-lg">
+            <p className="text-2xl text-gray-800 mb-6">{quote}</p>
+          </div>
+        </div>
+      </section>
 
       {/* Footer (Optional) */}
       <footer className="text-center py-4 text-gray-500">
