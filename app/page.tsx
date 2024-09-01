@@ -158,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* Footer (Optional) */}
-      <footer className="text-center py-4 text-blue-500 z-10 mt-8">
+      <footer className="text-center py-4 text-gray-500 z-10 mt-8">
         <p>Have a good day ❤</p>
       </footer>
     </main>

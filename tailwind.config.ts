@@ -35,7 +35,7 @@ const config: Config = {
         },
       },
       colors: {
-        particleBlue: 'rgba(173, 216, 230, 0.5)', 
+        particleBlue: 'rgb(137, 207, 240, 0.6)', 
       },
     },
   },
