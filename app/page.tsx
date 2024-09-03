@@ -121,7 +121,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-blue-600">Welcome to the Random Quote Generator</h1>
       </header>
 
-      {/* Mood Selection with Buttons */}
+      {/* Mood Selection Buttons */}
       <section className="text-center mb-6 z-10">
         <h2 className="text-lg font-semibold text-gray-700 mb-4">Select your mood</h2>
         <div className="flex space-x-4 justify-center">
