@@ -144,7 +144,7 @@ export default function Home() {
           className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300"
           onClick={() => getRandomQuote(mood)}
         >
-          Get a New Quote
+          Generate a Quote
         </button>
       </section>
 
