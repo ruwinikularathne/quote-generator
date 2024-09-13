@@ -117,7 +117,7 @@ export default function Home() {
       </div>
 
       {/* Header */}
-      <header className="text-center py-6 z-10">
+      <header className="text-center py-6 z-10 mb-4">
         <h1 className="text-4xl font-bold text-blue-600">Welcome to the Random Quote Generator</h1>
       </header>
 
@@ -131,7 +131,7 @@ export default function Home() {
               onClick={() => getRandomQuote(currentMood as keyof typeof moodQuotes)}
               className={`p-3 ${
                 mood === currentMood ? 'bg-blue-700' : 'bg-[#6495ED]'
-              } text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300`}
+              } mt-6 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300`}
             >
               {currentMood}
             </button>
