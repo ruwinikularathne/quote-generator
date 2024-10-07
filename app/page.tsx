@@ -123,7 +123,8 @@ export default function Home() {
 
       {/* Mood Selection Buttons */}
       <section className="text-center mb-6 z-10">
-        <h2 className="text-lg font-semibold text-gray-700 mb-4">Select your mood to Generate a quote</h2>
+      <h2 className="text-lg font-semibold text-gray-700 mb-4">Do you want to fix your mood?</h2>
+        <h2 className="text-lg font-semibold text-gray-700 mb-4">Select your mood from here to Generate a quote</h2>
         <div className="flex space-x-4 justify-center">
           {Object.keys(moodQuotes).map((currentMood) => (
             <button
