@@ -160,7 +160,7 @@ export default function Home() {
 
       {/* Footer (Optional) */}
       <footer className="text-center py-4 text-gray-500 z-10 mt-8">
-        <p>Have a nice day ❤</p>
+        <p>Have a good day ❤</p>
       </footer>
     </main>
   );
