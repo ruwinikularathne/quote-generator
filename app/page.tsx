@@ -27,7 +27,7 @@ const moodQuotes = {
   Inspired: [
     "Inspiration exists, but it has to find you working.",
     "The best way to predict the future is to create it.",
-    "Your only limit is your mind. Dream big and work hard.",
+    "Your only limit is your mind, dream big and work hard.",
   ],
   Love: [
     "Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope.",
