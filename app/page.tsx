@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 
-// Mood quotes
 const moodQuotes = {
   Motivated: [
     "The only limit to our realization of tomorrow is our doubts of today.",
@@ -116,12 +115,10 @@ export default function Home() {
             style={{ top: '40%', left: '30%', animationDuration: '13s' }}></div>
       </div>
 
-      {/* Header */}
       <header className="text-center py-6 z-10 mb-4">
         <h1 className="text-4xl font-bold text-blue-600">Welcome to the Random Quote Generator</h1>
       </header>
 
-      {/* Mood Selection Buttons */}
       <section className="text-center mb-6 z-10">
       <h2 className="text-lg font-semibold text-gray-700 mb-4">Do you want to fix your mood?</h2>
         <h2 className="text-lg font-semibold text-gray-700 mb-4">Select your mood from here to Generate a quote</h2>
@@ -157,8 +154,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer (Optional) */}
       <footer className="text-center py-4 text-gray-500 z-10 mt-8">
         <p>Have a beautiful day ❤</p>
       </footer>
