@@ -12,7 +12,7 @@ const moodQuotes = {
   Happy: [
     "Keep your face always toward the sunshine. Then, the shadows will fall behind you.",
     "Happiness is not something ready-made. It comes from your own actions.",
-    "The purpose of our lives is to be happy.",
+    "The purpose of your life is to be happy.",
   ],
   Thoughtful: [
     "Do not watch the clock. Do what it does. Keep going.",
@@ -35,7 +35,7 @@ const moodQuotes = {
     "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."
   ],
   Calm: [
-    "Keep calm and carry on.",
+    "Always eep calm and carry on.",
     "Calmness is the cradle of power.",
     "The more tranquil a man becomes, the greater is his success."
   ],
