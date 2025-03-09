@@ -24,7 +24,7 @@ const moodQuotes = {
     "Relax, recharge, and reflect. Sometimes it's okay to do nothing.",
   ],
   Inspired: [
-    "Inspiration exists, but it has to find you working.",
+    "Inspiration exists, but remember, it has to find you working.",
     "The best way to predict the future is to create it.",
     "Your only limit is your mind, dream big and work hard.",
   ],
