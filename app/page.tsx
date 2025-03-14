@@ -39,7 +39,7 @@ const moodQuotes = {
     "The more tranquil a man becomes, the greater is his success."
   ],
   Adventurous: [
-    "Life is either a daring adventure or nothing at all.",
+    "Life can be either a daring adventure or nothing at all.",
     "The biggest adventure you can take is to live the life of your dreams.",
     "Adventure is worthwhile in itself."
   ],
