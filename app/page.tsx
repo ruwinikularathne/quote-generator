@@ -49,7 +49,7 @@ const moodQuotes = {
     "Gratitude is not only the greatest of virtues but the parent of all others."
   ],
   Confident: [
-    "Confidence is the key to unlocking your true potential.",
+    "Confidence is the key to unlock your true potential.",
     "Believe you can, and you're halfway there.",
     "With confidence, you have won before you have started."
   ],
@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </section>
       <footer className="text-center py-4 text-gray-500 z-10 mt-8">
-        <p>Have a good day ❤</p>
+        <p>Have a nice day ❤</p>
       </footer>
     </main>
   );
